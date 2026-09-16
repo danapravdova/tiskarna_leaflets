@@ -38,7 +38,7 @@ Interaktivní Power BI report je rozdělen do 4 klíčových manažerských obla
 
 ### 3. HR kapacity a predikce přesčasové práce
 *   **Manažerský vhled:** Kontroluje dodržování zákonného limitu přesčasů (150 hodin ročně na osobu). Sleduje individuální produktivitu tiskařů, která si drží stabilní průměr **635 arch/hod** díky vysoké efektivitě výkonnostních mzdových příplatků.
-*   **Predikční model:** Vizualizuje vývoj mzdových nákladů a přesně izoluje kapacitní zlom na přelomu let 2026 a 2027, kdy náklady na unavený stávající tým začínají přeplácet fixní plat nového zaměstnance. Slouží jako podklad pro včasné schválení náboru čtvrtého tiskaře.
+*   **Predikční model:** Vizualizuje vývoj mzdových nákladů a přesně izoluje kapacitní zlom na průsečíku mezi lety 2027 a 2028, kdy náklady na unavený stávající tým začínají fixní úvazek nového zaměstnance prokazatelně přeplácet. Slouží jako podklad pro včasné schválení náboru čtvrtého tiskaře již na začátku roku 2027.
 
 ### 4. Finanční profitabilita a simulace tržních rizik
 *   **Manažerský vhled:** Poskytuje kompletní manažerský výkaz zisků a ztrát (P&L) rozpadnutý na jednotlivé roky a klienty. Marže organicky reflektují reálné byznysové vlivy (propad ziskovosti v roce 2024 vs. maržový vrchol 34,53 % v roce 2025).
