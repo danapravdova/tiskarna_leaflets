@@ -1,6 +1,6 @@
 # End-to-End analytika farmaceutické tiskárny: Od MySQL Star Schema po What-If simulace v Power BI
 
-## 📊 Přehled projektu
+## Přehled projektu
 Tento repozitář obsahuje komplexní datový a BI projekt (end-to-end), který simuluje reálný polygrafický provoz specializovaný na tisk příbalových letáků pro nadnárodní farmaceutické korporace (Zentiva, Sanofi, Novartis, Teva). **Prezentované výsledky a analýzy představují souhrn produkčních a finančních dat za ucelené období od ledna 2023 do datové uzávěrky k 31. červenci 2026.**
 
 Projekt demonstruje kompletní datový cyklus: od pokročilého návrhu databáze, přes automatizované audity kvality dat a transformaci nepřetržitého 24/7 provozu v MySQL, až po exekutivní finanční reporting a scénářové analýzy v Power BI.
@@ -16,7 +16,7 @@ Projekt demonstruje kompletní datový cyklus: od pokročilého návrhu databáz
 
 ---
 
-## 🛠️ Architektura a technologický stack
+## Architektura a technologický stack
 *   **Databázové prostředí:** MySQL Server (pokročilé DDL/DML, uložené procedury, harmonizační skripty, simulace provozního šumu).
 *   **Datový model:** Striktní hvězdicové schéma (Star Schema – 1 tabulka faktů, 4 rozměrové dimenze) s jednosměrnými relacemi 1:N pro eliminaci ambiguity.
 *   **BI & Analytics:** Power BI Desktop.
@@ -24,7 +24,7 @@ Projekt demonstruje kompletní datový cyklus: od pokročilého návrhu databáz
 
 ---
 
-## 🔬 Klíčové analytické okruhy a struktura reportu
+## Klíčové analytické okruhy a struktura reportu
 
 Interaktivní Power BI report je rozdělen do 4 klíčových manažerských oblastí, z nichž každá obsahuje automatizovanou textovou interpretaci pro top management.
 
@@ -46,14 +46,14 @@ Interaktivní Power BI report je rozdělen do 4 klíčových manažerských obla
 
 ---
 
-## 📂 Obsah repozitáře
+## Obsah repozitáře
 *   `/database_schema.sql` - Kompletní DDL skript definující tabulky, primární/cizí klíče a datová omezení.
 *   `/data_transformation_audit.sql` - Pokročilé SQL dotazy použité pro harmonizaci dat, dočasnou proceduru pro rozdělení směn 24/7 a automatizované testy datové integrity.
 *   `/images/` - Složka s high-resolution screenshoty všech 4 interaktivních stran Power BI reportu.
 
 ---
 
-## 🙋‍♀️ O autorce
+## O autorce
 Jsem Seniorní datová analytička s exaktním matematicko-statistickým vzděláním z **Vysoké školy ekonomické v Praze (Fakulta informatiky a statistiky)** a 9 lety reálné praxe v průmyslovém a finančním controllingu polygrafického provozu. 
 
 Díky unikátní kombinaci hard-skills (MySQL, Power BI, DAX) a dlouholeté praxe v ekonomické žurnalistice a literární tvorbě se specializuji na datový storytelling – tedy na transformaci chladných transakčních logů do srozumitelných, neprůstřelných byznysových příběhů pro top management firem.
