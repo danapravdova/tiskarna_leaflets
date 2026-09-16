@@ -1,7 +1,10 @@
 # End-to-End analytika farmaceutické tiskárny: Od MySQL Star Schema po What-If simulace v Power BI
 
 ## 📊 Přehled projektu
-Tento repozitář obsahuje komplexní datový a BI projekt (end-to-end), který simuluje reálný polygrafický provoz specializovaný na tisk příbalových letáků pro nadnárodní farmaceutické korporace (Zentiva, Sanofi, Novartis, Teva). 
+Tento repozitář obsahuje komplexní datový a BI projekt (end-to-end), který simuluje reálný polygrafický provoz specializovaný na tisk příbalových letáků pro nadnárodní farmaceutické korporace (Zentiva, Sanofi, Novartis, Teva). **Prezentované výsledky a analýzy představují souhrn produkčních a finančních dat za ucelené období od ledna 2023 do datové uzávěrky k 31. červenci 2026.**
+
+Projekt demonstruje kompletní datový cyklus: od pokročilého návrhu databáze, přes automatizované audity kvality dat a transformaci nepřetržitého 24/7 provozu v MySQL, až po exekutivní finanční reporting a scénářové analýzy v Power BI.
+ 
 
 Projekt demonstruje kompletní datový cyklus: od pokročilého návrhu databáze, přes automatizované audity kvality dat a transformaci nepřetržitého 24/7 provozu v MySQL, až po exekutivní finanční reporting a scénářové analýzy v Power BI.
 
