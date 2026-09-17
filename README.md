@@ -27,13 +27,14 @@ Interaktivní Power BI report je rozdělen do 4 klíčových manažerských obla
 
 ### 1. Výrobní efektivita a audit kvality
 *   **Manažerský vhled:** Report sleduje přísný farmaceutický limit chybovosti (0,50 %). Celková průměrná zmetkovitost dosahuje 0,63 % a generuje materiálové ztráty 203 626 Kč, přičemž největší odpad vzniká mechanickým seřizováním (špatný soutisk a ořez) na ofsetových linkách Heidelberg.
-*   **Metrika průchodnosti:** Analýza zavádí pokročilou metriku **Objem produkce na hodinu prostojů**. Matematicky dokazuje, že **Zentiva** je lídrem efektivity s výkonem **9 343 arch/hod**, čehož je dosaženo strategickým seskupováním velkoobjemových šarží se stejným formátem.
+*   **Metrika průchodnosti:** Analýza zavádí metriku **Objem produkce na hodinu prostojů**. Matematicky dokazuje, že **Zentiva** je lídrem efektivity s výkonem **9 343 arch/hod**, čehož je dosaženo strategickým seskupováním velkoobjemových šarží se stejným formátem.
 
 ![Výrobní efektivita a kvalita tisku](Power_bi_strana1.png)
 
 ### 2. Skladové hospodářství a analýza ležáků
 *   **Manažerský vhled:** Výkaz využívá pokročilé podmíněné formátování pro analýzu stárnutí zásob na základě dnů od posledního výdeje.
-*   **Finanční dopad:** Model kvantifikuje skryté náklady na držení zásob (Holding Costs) nastavené interní sazbou 20 % z vázaného kapitálu (zahrnuje specifickou klimatizaci haly, pojištění a riziko legislativních změn v textu léčiv). Izoluje kritické položky (např. lékařský papír ležící na skladě 1 150 dní) a přináší scénáře pro jejich odpis či alternativní spotřebu.
+*   **Finanční dopad:** Model přesně vyčísluje skryté náklady na držení zásob (Holding Costs), které tvoří interní sazba 20 % z vázaného kapitálu. Tato částka zahrnuje reálné výdaje na specifickou klimatizaci haly, pojištění a také riziko legislativních změn v textech léčiv. Analýza navíc izoluje kritické ležáky (např. lékařský papír skladovaný již 1 150 dní) a manažerům okamžitě nabízí scénáře pro jejich odpis nebo alternativní využití ve výrobě.
+
 
 ![Skladové hospodářství a ležáky](Power_bi_strana2.png)
 
