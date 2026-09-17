@@ -59,6 +59,6 @@ Interaktivní Power BI report je rozdělen do 4 klíčových manažerských obla
 ---
 
 ## O autorce
-Jsem Seniorní datová analytička s exaktním matematicko-statistickým vzděláním z **Vysoké školy ekonomické v Praze (Fakulta informatiky a statistiky)** a 9 lety reálné praxe v průmyslovém a finančním controllingu polygrafického provozu. 
+Jsem datová analytička s exaktním matematicko-statistickým vzděláním z **Vysoké školy ekonomické v Praze (Fakulta informatiky a statistiky)** a 9 lety reálné praxe v průmyslovém a finančním controllingu polygrafického provozu. 
 
-Díky unikátní kombinaci hard-skills (MySQL, Power BI, DAX) a dlouholeté praxe v ekonomické žurnalistice a literární tvorbě se specializuji na datový storytelling – tedy na transformaci chladných transakčních logů do srozumitelných, neprůstřelných byznysových příběhů pro top management firem.
+Díky unikátní kombinaci hard-skills (MySQL, Power BI, DAX), dlouholeté praxi v ekonomické žurnalistice a literární tvorbě se specializuji na datový storytelling – tedy na transformaci chladných transakčních logů do srozumitelných, neprůstřelných byznysových příběhů pro top management firem.
