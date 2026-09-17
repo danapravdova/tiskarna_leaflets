@@ -15,7 +15,7 @@ Projekt demonstruje kompletní datový cyklus: od pokročilého návrhu databáz
 
 ## Architektura a technologický stack
 *   **Databázové prostředí:** MySQL Server (pokročilé DDL/DML, uložené procedury, harmonizační skripty, simulace provozního šumu).
-*   **Datový model:** Striktní hvězdicové schéma (Star Schema – 1 tabulka faktů, 4 rozměrové dimenze) s jednosměrnými relacemi 1:N pro eliminaci ambiguity.
+*   **Datový model:** Striktní hvězdicové schéma (Star Schema – 2 tabulky faktů, 5 rozměrových dimenzí) s jednosměrnými relacemi 1:N pro eliminaci ambiguity.
 *   **BI & Analytics:** Power BI Desktop.
 *   **Pokročilé výpočty (DAX):** Iterativní vyhodnocování kontextu řádků (`SUMX`), dynamic What-If parametry pro simulaci tržních fluktuací materiálu a predikční HR modely.
 
