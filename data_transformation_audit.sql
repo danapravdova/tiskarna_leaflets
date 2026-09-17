@@ -1,57 +1,92 @@
--- ============================================================================
--- DATOVÉ TRANSFORMACE, MODELOVÁNÍ 24/7 PROVOZU A VALIDAČNÍ AUDITY
--- ============================================================================
-
--- 1. TRANSFORMACE: Rozsekání 1 řádku na 3 samostatné směny se zachováním celkového objemu dne
 DELIMITER //
 
 CREATE PROCEDURE `Oprava_Smen_A_Doplneni_Final`()
 BEGIN
-    CREATE TEMPORARY TABLE temp_puvodni_vyroba AS SELECT * FROM `fact_vyrobni_zaznamy_tisk`;
-    TRUNCATE TABLE `fact_vyrobni_zaznamy_tisk`;
+    -- 1. KROK: Ošetření bezpečného režimu pro hromadné úpravy
+    SET SQL_SAFE_UPDATES = 0;
 
-    -- Vložení Ranní směny (36 % původního výkonu)
-    INSERT INTO `fact_vyrobni_zaznamy_tisk`
-    SELECT null, id_stroje, id_zakazky, id_papiru, 'TIS-01', datum_smeny, 'Ranní', je_mimoradna_sobota,
-    ROUND(pocet_hodin_prescasu_smena * 0.33, 2), ROUND(vytisteno_archu_celkem * 0.36, 0),
-    ROUND(zmetky_spatny_soutisk * 0.34, 0), ROUND(zmetky_spatny_orez * 0.35, 0), ROUND(zmetky_spatne_slovo * 0.32, 0),
-    ROUND(prostoje_hodiny * 0.33, 2), ROUND(provozni_naklady_smena_czk * 0.34, 2) FROM temp_puvodni_vyroba;
+    -- 2. KROK: Kompletní vynulování přesčasů pro čistý start transformace
+    UPDATE fact_vyrobni_zaznamy_tisk 
+    SET pocet_hodin_prescasu_smena = 0.00 
+    WHERE id_zaznamu > 0;
 
-    -- Vložení Odpolední směny (32 % původního výkonu)
-    INSERT INTO `fact_vyrobni_zaznamy_tisk`
-    SELECT null, id_stroje, id_zakazky, id_papiru, 'TIS-02', datum_smeny, 'Odpolední', je_mimoradna_sobota,
-    ROUND(pocet_hodin_prescasu_smena * 0.33, 2), ROUND(vytisteno_archu_celkem * 0.32, 0),
-    ROUND(zmetky_spatny_soutisk * 0.33, 0), ROUND(zmetky_spatny_orez * 0.30, 0), ROUND(zmetky_spatne_slovo * 0.33, 0),
-    ROUND(prostoje_hodiny * 0.31, 2), ROUND(provozni_naklady_smena_czk * 0.33, 2) FROM temp_puvodni_vyroba;
+    -- 3. KROK: Generování organických přesčasů s realistickým provozním šumem
+    -- Simulujeme běžnou fabriku: cca 65 % směn je bez přesčasů (čistá nula), 
+    -- na zbytku směn tiskaři táhnou náhodné přesčasy mezi 1 až 5 hodinami.
+    UPDATE fact_vyrobni_zaznamy_tisk
+    SET pocet_hodin_prescasu_smena = CASE 
+        WHEN RAND() > 0.35 THEN 0.00
+        ELSE ROUND(1.00 + (RAND() * 4.00), 2)
+    END
+    WHERE id_zaznamu > 0;
 
-    -- Vložení Noční směny (Matematický zbytek do 100 % pro neprůstřelnou finanční shodu)
-    INSERT INTO `fact_vyrobni_zaznamy_tisk`
-    SELECT null, id_stroje, id_zakazky, id_papiru, 'TIS-03', datum_smeny, 'Noční', je_mimoradna_sobota,
-    ROUND(pocet_hodin_prescasu_smena * 0.34, 2),
-    vytisteno_archu_celkem - ROUND(vytisteno_archu_celkem * 0.36, 0) - ROUND(vytisteno_archu_celkem * 0.32, 0),
-    zmetky_spatny_soutisk - ROUND(zmetky_spatny_soutisk * 0.34, 0) - ROUND(zmetky_spatny_soutisk * 0.33, 0),
-    zmetky_spatny_orez - ROUND(zmetky_spatny_orez * 0.35, 0) - ROUND(zmetky_spatny_orez * 0.30, 0),
-    zmetky_spatne_slovo - ROUND(zmetky_spatne_slovo * 0.32, 0) - ROUND(zmetky_spatne_slovo * 0.33, 0),
-    prostoje_hodiny - ROUND(prostoje_hodiny * 0.33, 2) - ROUND(prostoje_hodiny * 0.31, 2),
-    provozni_naklady_smena_czk - ROUND(provozni_naklady_smena_czk * 0.34, 2) - ROUND(provozni_naklady_smena_czk * 0.33, 2) FROM temp_puvodni_vyroba;
+    -- 4. KROK: Matematická kalibrace na přesné byznysové milníky
+    -- Tento krok proporcionálně přepočítá vygenerovaný šum tak, aby roční sumy 
+    -- a měsíční průměry v Power BI přesně odpovídaly schválenému manažerskému zadání.
 
-    DROP TEMPORARY TABLE temp_puvodni_vyroba;
+    -- --- ROK 2023 (Cílové sumy: Jan 120h, Marek 115h, Petr 120h) ---
+    UPDATE fact_vyrobni_zaznamy_tisk f
+    JOIN dim_zamestnanci z ON f.id_hlavni_tiskar = z.id_zamestnance
+    JOIN (
+        SELECT f2.id_hlavni_tiskar, SUM(f2.pocet_hodin_prescasu_smena) AS nova_suma
+        FROM fact_vyrobni_zaznamy_tisk f2 WHERE YEAR(f2.datum_smeny) = 2023 GROUP BY f2.id_hlavni_tiskar
+    ) AS n ON f.id_hlavni_tiskar = n.id_hlavni_tiskar
+    SET f.pocet_hodin_prescasu_smena = ROUND(f.pocet_hodin_prescasu_smena * (
+        CASE 
+            WHEN z.jmeno LIKE '%Novák%' THEN 120.00 
+            WHEN z.jmeno LIKE '%Dvořák%' THEN 115.00 
+            ELSE 120.00 
+        END / n.nova_suma), 2)
+    WHERE YEAR(f.datum_smeny) = 2023 AND n.nova_suma > 0;
+
+    -- --- ROK 2024 (Cílové sumy: Jan 130h, Marek 120h, Petr 140h) ---
+    UPDATE fact_vyrobni_zaznamy_tisk f
+    JOIN dim_zamestnanci z ON f.id_hlavni_tiskar = z.id_zamestnance
+    JOIN (
+        SELECT f2.id_hlavni_tiskar, SUM(f2.pocet_hodin_prescasu_smena) AS nova_suma
+        FROM fact_vyrobni_zaznamy_tisk f2 WHERE YEAR(f2.datum_smeny) = 2024 GROUP BY f2.id_hlavni_tiskar
+    ) AS n ON f.id_hlavni_tiskar = n.id_hlavni_tiskar
+    SET f.pocet_hodin_prescasu_smena = ROUND(f.pocet_hodin_prescasu_smena * (
+        CASE 
+            WHEN z.jmeno LIKE '%Novák%' THEN 130.00 
+            WHEN z.jmeno LIKE '%Dvořák%' THEN 120.00 
+            ELSE 140.00 
+        END / n.nova_suma), 2)
+    WHERE YEAR(f.datum_smeny) = 2024 AND n.nova_suma > 0;
+
+    -- --- ROK 2025 (Zlomový rok nad limitem 150h + plošné navýšení o 15h) ---
+    UPDATE fact_vyrobni_zaznamy_tisk f
+    JOIN dim_zamestnanci z ON f.id_hlavni_tiskar = z.id_zamestnance
+    JOIN (
+        SELECT f2.id_hlavni_tiskar, SUM(f2.pocet_hodin_prescasu_smena) AS nova_suma
+        FROM fact_vyrobni_zaznamy_tisk f2 WHERE YEAR(f2.datum_smeny) = 2025 GROUP BY f2.id_hlavni_tiskar
+    ) AS n ON f.id_hlavni_tiskar = n.id_hlavni_tiskar
+    SET f.pocet_hodin_prescasu_smena = ROUND(f.pocet_hodin_prescasu_smena * (
+        CASE 
+            WHEN z.jmeno LIKE '%Novák%' THEN (150.00 + 15.00) 
+            WHEN z.jmeno LIKE '%Dvořák%' THEN (155.00 + 15.00) 
+            ELSE (170.00 + 15.00) 
+        END / n.nova_suma), 2)
+    WHERE YEAR(f.datum_smeny) = 2025 AND n.nova_suma > 0;
+
+    -- --- ROK 2026 (Kritické přetížení, měsíční průměry 21h až 24h) ---
+    -- Zohledňuje zkrácené období do 31. července (7 měsíců).
+    UPDATE fact_vyrobni_zaznamy_tisk f
+    JOIN dim_zamestnanci z ON f.id_hlavni_tiskar = z.id_zamestnance
+    JOIN (
+        SELECT f2.id_hlavni_tiskar, SUM(f2.pocet_hodin_prescasu_smena) AS nova_suma
+        FROM fact_vyrobni_zaznamy_tisk f2 WHERE YEAR(f2.datum_smeny) = 2026 GROUP BY f2.id_hlavni_tiskar
+    ) AS n ON f.id_hlavni_tiskar = n.id_hlavni_tiskar
+    SET f.pocet_hodin_prescasu_smena = ROUND(f.pocet_hodin_prescasu_smena * (
+        CASE 
+            WHEN z.jmeno LIKE '%Novák%' THEN 147.00 
+            WHEN z.jmeno LIKE '%Dvořák%' THEN 147.00 
+            ELSE 168.00 
+        END / n.nova_suma), 2)
+    WHERE YEAR(f.datum_smeny) = 2026 AND n.nova_suma > 0;
+
+    -- 5. KROK: Obnovení bezpečného režimu
+    SET SQL_SAFE_UPDATES = 1;
 END //
+
 DELIMITER ;
-
--- 2. HISTORICKÝ PROVOZNÍ AUDIT: Modelování nelineárních vnitrofiremních režií podle náročnosti šarží
-UPDATE `fact_vyrobni_zaznamy_tisk` f
-JOIN `dim_zakazky` z ON f.id_zakazky = z.id_zakazky
-SET f.provozni_naklady_smena_czk = CASE 
-    WHEN z.klient = 'Zentiva'  THEN CASE WHEN YEAR(f.datum_smeny) = 2024 THEN ROUND(z.Cena_Zakazky_Celkem * 0.52, 2) ELSE ROUND(z.Cena_Zakazky_Celkem * 0.44, 2) END
-    WHEN z.klient = 'Sanofi'   THEN CASE WHEN YEAR(f.datum_smeny) = 2024 THEN ROUND(z.Cena_Zakazky_Celkem * 0.68, 2) ELSE ROUND(z.Cena_Zakazky_Celkem * 0.48, 2) END
-    WHEN z.klient = 'Teva'     THEN CASE WHEN YEAR(f.datum_smeny) = 2026 THEN ROUND(z.Cena_Zakazky_Celkem * 0.58, 2) ELSE ROUND(z.Cena_Zakazky_Celkem * 0.50, 2) END
-    WHEN z.klient = 'Novartis' THEN CASE WHEN YEAR(f.datum_smeny) = 2026 THEN ROUND(z.Cena_Zakazky_Celkem * 0.66, 2) ELSE ROUND(z.Cena_Zakazky_Celkem * 0.56, 2) END
-END;
-
--- Finální doregulování na celkovou ROS průmyslovou hladinu (Plošný 25% posun nákladů)
-UPDATE `fact_vyrobni_zaznamy_tisk` SET `provozni_naklady_smena_czk` = ROUND(`provozni_naklady_smena_czk` * 1.25, 2);
-
--- 3. VALIDACE: Automatizovaný audit datové integrity (Musí vrátit 0 řádků)
-SELECT 'CHYBA: Prostoje nad limit 8h!' as Status, id_zaznamu, prostoje_hodiny FROM `fact_vyrobni_zaznamy_tisk` WHERE prostoje_hodiny > 8.00;
-SELECT 'CHYBA: Záporné finanční náklady!' as Status, id_zaznamu, provozni_naklady_smena_czk FROM `fact_vyrobni_zaznamy_tisk` WHERE provozni_naklady_smena_czk <= 0;
