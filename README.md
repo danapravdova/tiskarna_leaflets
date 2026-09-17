@@ -39,8 +39,8 @@ Interaktivní Power BI report je rozdělen do 4 klíčových manažerských obla
 ![Skladové hospodářství a ležáky](Power_bi_strana2.png)
 
 ### 3. HR kapacity a predikce přesčasové práce
-*   **Manažerský vhled:** Sekce kontroluje dodržování zákonného limitu přesčasů (150 hodin ročně na osobu). Sleduje individuální produktivitu tiskařů, která si drží stabilní průměr **635 arch/hod** díky vysoké efektivitě výkonnostních mzdových příplatků.
-*   **Predikční model:** Graficky vizualizuje vývoj mzdových nákladů a přesně izoluje kapacitní zlom na průsečíku mezi lety 2027 a 2028, kdy náklady na unavený stávající tým začínají fixní úvazek nového zaměstnance prokazatelně přeplácet. Slouží jako podklad pro včasné schválení náboru čtvrtého tiskaře již na začátku roku 2027.
+*   **Manažerský vhled:** Tato sekce přísně kontroluje dodržování zákonného limitu přesčasů (150 hodin ročně na osobu). Sleduje také individuální produktivitu tiskařů, která si dlouhodobě drží stabilní a vysoký průměr 630 arch/hod díky skvěle nastavené efektivitě výkonnostních mzdových příplatků.
+*   **Predikční model:** Vizuál graficky znázorňuje vývoj mzdových nákladů a přesně izoluje kapacitní zlom na průsečíku v roce 2027. V tomto bodě začínají finanční náklady na přesčasy stávajícího týmu fixní úvazek nového zaměstnance prokazatelně přeplácet. Výstup slouží jako neprůstřelný podklad pro včasné schválení náboru čtvrtého tiskaře již na začátku roku 2027 s efektivním využitím akumulované čisté úspory ve výši 924 901 Kč.
 
 ![HR kapacitní a mzdový audit](Power_bi_strana3.png)
 
