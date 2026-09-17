@@ -1,0 +1,32 @@
+# =========================================================================
+# GITIGNORE PRO END-TO-END BI PROJEKT (Power BI + MySQL + Windows)
+# =========================================================================
+
+# --- Power BI Desktop (lokální uživatelská nastavení a cache) ---
+*.Layout
+*.Settings
+*.Volume
+*.UserWorkbookSettings
+*__UserWorkbookSettings.xml
+*.UserWorkbookStyles
+*.TempCatalog
+*.pbiCache
+*.pbiUserWorkbookSettings
+.pbi/
+
+# --- Dočasné soubory z Excelu a Office (při otevřených souborech) ---
+~$*.xlsx
+~$*.xls
+~$*.csv
+~$*.docx
+
+# --- Systémový balast operačního systému (Windows / macOS) ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Velké logovací soubory ---
+*.log
