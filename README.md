@@ -26,8 +26,8 @@ Projekt demonstruje kompletní datový cyklus. Ten sahá od pokročilého návrh
 Interaktivní Power BI report je rozdělen do 4 klíčových manažerských oblastí, z nichž každá obsahuje automatizovanou textovou interpretaci pro top management.
 
 ### 1. Výrobní efektivita a audit kvality
-*   **Manažerský vhled:** Report sleduje přísný farmaceutický limit chybovosti (0,50 %). Celková průměrná zmetkovitost dosahuje 0,63 % a generuje materiálové ztráty 203 626 Kč, přičemž největší odpad vzniká mechanickým seřizováním (špatný soutisk a ořez) na ofsetových linkách Heidelberg.
-*   **Metrika průchodnosti:** Analýza zavádí metriku **Objem produkce na hodinu prostojů**. Matematicky dokazuje, že **Zentiva** je lídrem efektivity s výkonem **9 343 arch/hod**, čehož je dosaženo strategickým seskupováním velkoobjemových šarží se stejným formátem.
+*   **Manažerský vhled:** Report sleduje přísný farmaceutický limit chybovosti, který je nastaven na hodnotu 0,50 %. Celková průměrná zmetkovitost dosahuje 0,63 %, což automaticky aktivuje vizuální alarm na KPI kartě a zabarvuje metriku do červeného odstínu (#FF6B6B). Tento stav generuje materiálové ztráty ve výši 203 626 Kč, přičemž největší odpad vzniká mechanickým seřizováním (špatný soutisk a ořez) na ofsetových linkách Heidelberg. Pokud se kvalita drží v limitu, karta zůstává bezpečně zelená (#2ECC71).
+*   **Metrika průchodnosti:** Analýza zavádí pokročilou metriku **Objem produkce na hodinu prostojů**. Matematicky dokazuje, že **Zentiva** je lídrem efektivity s výkonem **9 343 arch/hod**, čehož je dosaženo strategickým seskupováním velkoobjemových šarží se stejným formátem.
 
 ![Výrobní efektivita a kvalita tisku](Power_bi_strana1.png)
 
