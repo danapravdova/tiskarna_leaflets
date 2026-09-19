@@ -1,5 +1,5 @@
 # End-to-End Analytika Farmaceutické Tiskárny
-### Od Transakčního Chaosu k Řízení Marže
+### Propojení výrobních ukazatelů s finančním řízením
 
 ## Příběh dat: Když kapacita naráží na technologický strop
 Tento projekt je komplexní případovou studií z prostředí polygrafického provozu specializovaného na tisk příbalových letáků pro nadnárodní farmaceutické lídry (**Zentiva, Sanofi, Novartis, Teva**). Prezentovaná data, názvy entit i finanční výsledky jsou naprosto smyšlené a slouží výhradně pro účely této ukázky. 
