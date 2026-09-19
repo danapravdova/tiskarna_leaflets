@@ -46,7 +46,7 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 
 ### 4. Finanční profitabilita a What-If simulace rizik (Zrcadlo finančního zdraví)
 *   **Byznysový příběh:** Finální vrstva reportu propojuje provozní realitu s čistým byznysovým výsledkem ve formě manažerského Výkazu zisků a ztrát. Výkaz věrně reflektuje tržní vývoj a čistou ziskovost – od propadu rentability v roce 2024 až po konsolidaci a vrchol rentability tržeb (ROS) na hladině 34,53 % v roce 2025.
-*   **Analytický přínos:** Pro ochranu zisku před turbulencemi na trhu komodit jsem implementovala plně responzivní **What-If citlivostní analýzu**. Management může pomocí posuvníku simulovat fluktuaci cen vstupního materiálu v rozsahu od -5 % do +15 % a okamžitě sledovat, jak zvýšení nákupních cen papíru degraduje celkový firemní zisk EBIT. Tento nástroj slouží jako bezpečný přístav při strategickém vyjednávání o cenách s farmaceutickými partnery pro nadcházející období.
+*   **Analytický přínos:** Pro ochranu zisku před turbulencemi na trhu komodit jsem implementovala plně responzivní **What-If citlivostní analýzu**. Management může pomocí posuvníku simulovat fluktuaci cen vstupního materiálu v rozsahu od -5 % do +15 % a okamžitě sledovat, jak zvýšení nákupních cen papíru degraduje celkový firemní zisk EBIT. Tento nástroj slouží jako strategický štít při vyjednávání o cenách s farmaceutickými partnery pro nadcházející období.
 
 ![Finanční analýza ziskovosti a marží](Power_bi_strana4.png)
 
