@@ -14,7 +14,7 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 *   **Hrubý objem produkce:** Výrobní linky za toto období zpracovaly celkem **25,2 milionu archů**, což reflektuje strmě rostoucí tržní poptávku.
 *   **Akumulovaný provozní zisk:** Efektivní řízení kapacit vygenerovalo za necelé čtyři roky provozní zisk ve výši **65,5 milionu Kč**.
 *   **Rentabilita tržeb:** Průměrná ziskovost provozu si drží zdravou hladinu **24,90 %**.
-*   **Disponibilní kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
+*   **Disponibilní kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **1 014 901 Kč** připravený pro strategický rozvoj.
 
 <p align="center">
   <br>
@@ -52,7 +52,7 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 ![HR kapacitní a mzdový audit](Power_bi_strana3.png)
 
 ### 4. Finanční profitabilita a What-If simulace rizik (Zrcadlo finančního zdraví)
-*   **Byznysový příběh:** Finální vrstva reportu propojuje provozní realitu s čistým byznysovým výsledkem ve formě manažerského Výkazu zisků a ztrát. Výkaz věrně reflektuje tržní vývoj a čistou ziskovost – od propadu rentability v roce 2024 až po konsolidaci a vrchol rentability tržeb (ROS) na hladině 34,53 % v roce 2025.
+*   **Byznysový příběh:** Finální vrstva reportu propojuje provozní realitu s čistým byznysovým výsledkem ve formě manažerského výkazu zisků a ztrát. Výkaz věrně reflektuje tržní vývoj a čistou ziskovost – od propadu rentability v roce 2024 až po vrchol na hladině 34,53 % v roce 2025.
 *   **Analytický přínos:** Pro ochranu zisku před turbulencemi na trhu komodit jsem implementovala plně responzivní **What-If citlivostní analýzu**. Management může pomocí posuvníku simulovat fluktuaci cen vstupního materiálu v rozsahu od -5 % do +15 % a okamžitě sledovat, jak zvýšení nákupních cen papíru degraduje celkový firemní zisk EBIT. Tento nástroj slouží jako strategický štít při vyjednávání o cenách s farmaceutickými partnery pro nadcházející období.
 
 ![Finanční analýza ziskovosti a marží](Power_bi_strana4.png)
