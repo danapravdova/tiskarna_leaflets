@@ -18,7 +18,7 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
    
 <p align="center">
   <br>
-  👉 <b><a href="https://youtu.be" size="4">[KLIKNĚTE ZDE] SPUSTIT VIDEO UKÁZKU INTERAKTIVNÍHO REPORTU NA YOUTUBE</a></b> 👈
+  👉 <b><a href="[https://youtu.be](https://youtu.be/v-IR-4F1xxA)" size="4">[KLIKNĚTE ZDE] SPUSTIT VIDEO UKÁZKU INTERAKTIVNÍHO REPORTU NA YOUTUBE</a></b> 👈
   <br>
   <font size="2" color="gray"><i>(Doporučeno: Otevřete video ukázku kliknutím kolečka myši nebo se stisknutou klávesou Ctrl pro zachování této stránky)</i></font>
   <br>
