@@ -31,10 +31,10 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 
 ## Ukázky pokročilého kódu (Code Samples)
 
-Pro ověření technické seniority uvádím ukázky reálné logiky z tohoto projektu, které demonstrují kombinaci pokročilého datového inženýrství a optimálního BI modelování:
+Pro ověření technické seniority uvádím ukázky reálné logiky z tohoto projektu, které demonstrují kombinaci pokročilého datového inženýrství a optimálního BI modelování nad reálnými daty z polygrafického provozu:
 
-### 1. SQL (ETL transformace a mzdový audit 24/7 provozu)
-Tento fragment z uložené procedury `data_transformation_audit.sql` řeší finanční rekalibraci nepřetržitého provozu. Ošetřuje noční směny přetékající přes půlnoc a dynamicky kalkuluje reálné mzdové náklady směny (základní složku za standardních 8 hodin + progresivní příplatky za přesčasy) na základě mzdových číselníků.
+### 1. SQL (Relační propojení a kalkulace mzdových nákladů)
+Tento dotaz reprezentuje analytickou logiku pro výpočet finančních nákladů na continuous provoz tiskárny. Spojuje transakční data o směnách s mzdovými číselníky tiskařů, ošetřuje specifické příplatky pro noční směny a kalkuluje progresivní přesčasy. Tato logika slouží jako podklad pro datové transformace a následné plnění skladových zásob.
 
 ```sql
 SELECT 
@@ -44,14 +44,14 @@ SELECT
     z.hodinova_sazba_zaklad,
     -- Výpočet mzdové složky za standardních 8 hodin + progresivní přesčas
     (8 * z.hodinova_sazba_zaklad) + 
-    (v.pocet_hodin_prescasu_smena * z.hodinova_sazba_zaklad * (1 + z.priplatek_prescas_procento / 100)) AS mzda_zaklad_a_prescas,
+    (v.pocet_hodin_prescasu_smena * z.hodinova_sazba_zaklad * (1 + z.priplatek_prescas_procento / 100)),
     -- Kalkulace specifických příplatků (noční / víkend) podle typu směny
     CASE 
         WHEN v.typ_smeny = 'Noční' THEN (8 * z.hodinova_sazba_zaklad * (z.priplatek_nocni_procento / 100))
         ELSE 0 
-    END AS priplatek_nocni_celkem
+    END
 FROM fact_vyrobni_zaznamy_tisk v
-JOIN dim_zamestnanci_sazby z ON v.id_hlavni_tiskar = z.id_zamestnance;
+JOIN dim_zamestnanci z ON v.id_hlavni_tiskar = z.id_zamestnance;
 ```
 
 ### 2. DAX (Responzivní What-If simulace pro exekutivní karty vs. liniové grafy)
