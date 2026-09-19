@@ -17,7 +17,7 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 *   **Disponibilní kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
 
 
-## Datová architektura a technologický stack
+## Použité technologie a datová architektura
 *   **Databázové inženýrství (MySQL):** Návrh a realizace relační databáze. Transformace surových transakčních logů z nepřetržitého 24/7 provozu pomocí uložených procedur, ošetření datové integrity a implementace stochastického šumu pro věrohodnou simulaci průmyslového chování.
 *   **Datové modelování (Star Schema):** Striktní hvězdicové schéma (2 tabulky faktů propojené přes cizí klíče na 5 rozměrových dimenzí) s jednosměrnými relacemi 1:N navržené tak, aby eliminovalo multiplicitu dat a maximalizovalo rychlost DAX výpočtů.
 *   **Pokročilá analytika (Power BI & DAX):** Vývoj komplexních byznysových metrik. Využití řádkových iterátorů s kontextuálními filtry (`SUMX`, `CALCULATE`), podmíněného alertingu a dynamického formátování pro okamžité manažerské vyhodnocení.
