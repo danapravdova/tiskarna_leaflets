@@ -23,9 +23,6 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 ▶️ **[SPUSTIT VIDEO UKÁZKU INTERAKTIVNÍHO REPORTU (YouTube)](https://youtu.be/v-IR-4F1xxA))**  
 *(Doporučeno: Otevřete odkaz kliknutím kolečka myši nebo se stisknutou klávesou Ctrl pro zachování této stránky)*
 
-
-![Výrobní efektivita a kvalita tisku](Power_bi_strana1.png)
-
 ## Použité technologie a datová architektura
 *   **Databázové inženýrství (MySQL):** Návrh a realizace relační databáze. Transformace surových transakčních logů z nepřetržitého 24/7 provozu pomocí uložených procedur, ošetření datové integrity a implementace stochastického šumu pro věrohodnou simulaci průmyslového chování.
 *   **Datový model:** Vytvořila jsem striktní hvězdicové schéma (Star Schema – 2 tabulky faktů propojené přes cizí klíče na 5 rozměrových dimenzí) s jednosměrnými relacemi 1:N navržené tak, aby eliminovalo multiplicitu dat a maximalizovalo rychlost DAX výpočtů.
