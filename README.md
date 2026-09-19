@@ -19,16 +19,16 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 
 ## Použité technologie a datová architektura
 *   **Databázové inženýrství (MySQL):** Návrh a realizace relační databáze. Transformace surových transakčních logů z nepřetržitého 24/7 provozu pomocí uložených procedur, ošetření datové integrity a implementace stochastického šumu pro věrohodnou simulaci průmyslového chování.
-*   **Datové modelování (Star Schema):** Striktní hvězdicové schéma (2 tabulky faktů propojené přes cizí klíče na 5 rozměrových dimenzí) s jednosměrnými relacemi 1:N navržené tak, aby eliminovalo multiplicitu dat a maximalizovalo rychlost DAX výpočtů.
+*   **Datový model:** Vytvořila jsem striktní hvězdicové schéma (Star Schema – 2 tabulky faktů propojené přes cizí klíče na 5 rozměrových dimenzí) s jednosměrnými relacemi 1:N navržené tak, aby eliminovalo multiplicitu dat a maximalizovalo rychlost DAX výpočtů.
 *   **Pokročilá analytika (Power BI & DAX):** Vývoj komplexních byznysových metrik. Využití řádkových iterátorů s kontextuálními filtry (`SUMX`, `CALCULATE`), podmíněného alertingu a dynamického formátování pro okamžité manažerské vyhodnocení.
 
 ---
 
 ## Provázaný manažerský reporting: Od provozních dat k finančním výsledkům
 
-### 1. Výrobní efektivita a audit kvality (První linie obrany marže)
+### 1. Výrobní efektivita a audit kvality (Ochranný štít firemní profitability)
 *   **Byznysový příběh:** Farmaceutický tisk netoleruje chyby – legislativní limit chybovosti je striktně nastaven na 0,50 %. Náš provoz vykazuje průměrnou zmetkovitost **0,63 %**, což automaticky aktivuje vizuální alarm na exekutivní kartě a odkrývá materiálové odpisy ve výši **203 626 Kč**. Data jasně usvědčují mechanické seřizování (špatný soutisk a ořez) na ofsetových linkách Heidelberg jako hlavního původce ztrát.
-*   **Analytický přínos:** Namísto sledování izolovaných objemů zavádím metriku **Objem produkce na hodinu prostojů**. Ta odhaluje, že **Zentiva** je s výkonem **9 343 arch/hod** naším nejefektivnějším klientem, protože její zakázky umožňují seskupovat velkoobjemové šarže se stejným formátem papíru. Naopak nový kontrakt pro **Tevu** prošel v letech 2025/2026 fragmentací, což si vynutilo souběžné zapojení digitálních technologií a vedlo k nárůstu technologických prostojů na historické maximum **123 hodin měsíčně**. Manažerským doporučením je zavedení povinné křížové revize šablon a investice do kamerové inspekce soutisku.
+*   **Analytický přínos:** Namísto sledování izolovaných objemů zavádím metriku **Objem produkce na hodinu prostojů**. Ta odhaluje, že **Zentiva** je s výkonem **9 343 archů na hodinu prostojů** naším nejefektivnějším klientem, protože její zakázky umožňují seskupovat velkoobjemové šarže se stejným formátem papíru. Naopak nový kontrakt pro **Tevu** prošel v letech 2025/2026 fragmentací, což si vynutilo souběžné zapojení digitálních technologií a vedlo k nárůstu technologických prostojů na historické maximum **123 hodin měsíčně**. Manažerským doporučením je zavedení povinné křížové revize šablon a investice do kamerové inspekce soutisku.
 
 ![Výrobní efektivita a kvalita tisku](Power_bi_strana1.png)
 
@@ -44,9 +44,9 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 
 ![HR kapacitní a mzdový audit](Power_bi_strana3.png)
 
-### 4. Finanční profitabilita a What-If simulace rizik (Strategický štít)
-*   **Byznysový příběh:** Finální vrstva reportu propojuje provozní realitu s čistým byznysovým výsledkem ve formě manažerského Výkazu zisků a ztrát (P&L). Výkaz věrně reflektuje tržní vývoj – od maržového propadu v roce 2024 až po konsolidaci a maržový vrchol 34,53 % v roce 2025.
-*   **Analytický přínos:** Pro ochranu zisku před turbulencemi na trhu komodit jsem implementovala plně responzivní **What-If citlivostní analýzu**. Management může pomocí posuvníku simulovat fluktuaci cen vstupního materiálu v rozsahu od -5 % do +15 % a okamžitě sledovat, jak zvýšení nákupních cen papíru degraduje celkový firemní zisk EBIT. Tento Nástroj slouží jako strategický štít při vyjednávání o cenách s farmaceutickými partnery pro nadcházející období.
+### 4. Finanční profitabilita a What-If simulace rizik (Zrcadlo finančního zdraví)
+*   **Byznysový příběh:** Finální vrstva reportu propojuje provozní realitu s čistým byznysovým výsledkem ve formě manažerského Výkazu zisků a ztrát. Výkaz věrně reflektuje tržní vývoj a čistou ziskovost – od propadu rentability v roce 2024 až po konsolidaci a vrchol rentability tržeb (ROS) na hladině 34,53 % v roce 2025.
+*   **Analytický přínos:** Pro ochranu zisku před turbulencemi na trhu komodit jsem implementovala plně responzivní **What-If citlivostní analýzu**. Management může pomocí posuvníku simulovat fluktuaci cen vstupního materiálu v rozsahu od -5 % do +15 % a okamžitě sledovat, jak zvýšení nákupních cen papíru degraduje celkový firemní zisk EBIT. Tento nástroj slouží jako bezpečný přístav při strategickém vyjednávání o cenách s farmaceutickými partnery pro nadcházející období.
 
 ![Finanční analýza ziskovosti a marží](Power_bi_strana4.png)
 
