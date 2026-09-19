@@ -58,7 +58,7 @@ JOIN dim_zamestnanci z ON v.id_hlavni_tiskar = z.id_zamestnance;
 Pro účely dynamické simulace nárůstu cen komodit jsem vytvořila dvojici provázaných metrik. Tento přístup striktně respektuje BI Best Practices – odděluje čistou číselnou logiku pro datové řady grafů od textově formátovaného výstupu pro manažerské KPI karty.
 
 #### A. Číselná metrika pro vizuály a navazující kalkulace (`_Num`)
-Metrika počítá simulované náklady jako čisté desetinné číslo, což umožňuje korektní vykreslení na osu Y v grafech a bezpečné použití v navazujících mírách (např. pro výpočet simulovaného zisku EBIT). Výpočet koeficientu z posuvníku je pro maximální výkon engine VertiPaq izolován v proměnné před samotnou iterační funkcí `SUMX`.
+Metrika počítá simulované náklady jako čisté desetinné číslo, což umožňuje korektní vykreslení na osu Y v grafech. Výpočet koeficientu z posuvníku je pro maximální výkon engine VertiPaq izolován v proměnné před samotnou iterační funkcí `SUMX`.
 
 ```dax
 Fin_Naklady_Celkem_Num = 
