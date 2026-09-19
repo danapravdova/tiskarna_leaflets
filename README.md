@@ -1,4 +1,4 @@
-# End-to-End Analytika Farmaceutické Tiskárny
+# End-to-End analytika farmaceutické tiskárny
 ### Propojení výrobních ukazatelů s finančním řízením
 
 ## Příběh dat: Když kapacita naráží na technologický strop
