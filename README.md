@@ -16,9 +16,14 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 *   **Rentabilita tržeb:** Průměrná ziskovost provozu si drží zdravou hladinu **24,90 %**.
 *   **Disponibilní kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
 *   
-[![Sledovat ukázku reportu](Power_bi_strana1.png)](https://youtu.be/v-IR-4F1xxA)
-*(Doporučeno: Otevřete odkaz na nové kartě kliknutím kolečka myši nebo s podržením klávesy Ctrl)*
+### 1. Výrobní efektivita a audit kvality (Ochranný štít firemní profitability)
+*   **Manažerský vhled:** Report sleduje přísný farmaceutický limit chybovosti, který je nastaven na hodnotu 0,50 %. Celková průměrná zmetkovitost dosahuje 0,63 %, což automaticky aktivuje vizuální alarm na exekutivní kartě a odkrývá materiálové odpisy ve výši 203 626 Kč. Největší podíl na celkovém odpadu vykazují vady způsobené špatným soutiskem barev a nepřesným ořezem archů. Tyto mechanické chyby jsou přímým důsledkem vysoké technologické náročnosti při ručním seřizování a kalibraci tiskových válců, kdy na začátku každé nové šarže dochází k přirozeným materiálovým ztrátám, než se linka plně stabilizuje.
+*   **Metrika průchodnosti:** Analýza zavádí pokročilou metriku **Objem produkce na hodinu prostojů**. Ta odhaluje, že **Zentiva** je s výkonem **9 343 archů na hodinu prostojů** naším nejefektivnějším klientem, protože její zakázky umožňují seskupovat velkoobjemové šarže se stejným formátem papíru. Naopak nový kontrakt pro **Tevu** prošel v letech 2025/2026 fragmentací, což si vynutilo souběžné zapojení digitálních technologií a vedlo k nárůstu technologických prostojů na historické maximum **123 hodin měsíčně**. Manažerským doporučením je zavedení povinné křížové revize šablon a investice do kamerové inspekce soutisku.
 
+▶️ **[SPUSTIT VIDEO UKÁZKU INTERAKTIVNÍHO REPORTU (YouTube)](https://youtu.be)**  
+*(Doporučeno: Otevřete odkaz kliknutím kolečka myši nebo se stisknutou klávesou Ctrl pro zachování této stránky)*
+
+![Výrobní efektivita a kvalita tisku](Power_bi_strana1.png)
 
 ## Použité technologie a datová architektura
 *   **Databázové inženýrství (MySQL):** Návrh a realizace relační databáze. Transformace surových transakčních logů z nepřetržitého 24/7 provozu pomocí uložených procedur, ošetření datové integrity a implementace stochastického šumu pro věrohodnou simulaci průmyslového chování.
