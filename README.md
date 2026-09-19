@@ -4,7 +4,7 @@
 ## Příběh dat: Když kapacita naráží na technologický strop
 Tento projekt je komplexní případovou studií z prostředí polygrafického provozu specializovaného na tisk příbalových letáků pro nadnárodní farmaceutické lídry (**Zentiva, Sanofi, Novartis, Teva**). Prezentovaná data, názvy entit i finanční výsledky jsou naprosto smyšlené a slouží výhradně pro účely této ukázky. 
 
-Celá architektura, datový model i byznysová logika však stoprocentně vycházejí z mé **9leté reálné praxe na pozici datové analytičky v reálné tiskárně farmaceutických příbalových letáků**. Projekt tak nepředstavuje generická data stažená z internetu, ale věrně simuluje skutečné zákonitosti, technologické limity, chybovost a finanční procesy v polygrafickém průmyslu.
+Celá architektura, datový model i byznysová logika však stoprocentně vycházejí z mé **9leté reálné praxe na pozici datového analytika v reálné tiskárně farmaceutických příbalových letáků**. Projekt tak nepředstavuje generická data stažená z internetu, ale věrně simuluje skutečné zákonitosti, technologické limity, chybovost a finanční procesy v polygrafickém průmyslu.
 
 Cílem projektu bylo vyřešit klasický manažerský konflikt: **Jak dlouho lze financovat výrobní špičky a růst zakázek pouze přesčasy stávajícího týmu, než unavený provoz zkolabuje na chybovosti, prostojích a sankcích za pozdní dodání?**
 
@@ -136,4 +136,4 @@ Aby byl projekt plně replikovatelný a transparentní, repozitář obsahuje kom
 ## O autorce: Spojení čísel a příběhů
 Jsem datová analytička s exaktním matematicko-statistickým zázemím z **Vysoké školy ekonomické v Praze (Fakulta informatiky a statistiky)** a mám 9 let reálné praxe v průmyslovém a finančním controllingu polygrafických provozů.
 
-Díky unikátní kombinaci pokročilých technických dovedností (MySQL, Power BI, DAX), analytické intuice a dlouholeté zkušenosti v ekonomické žurnalistice a literární tvorbě se specializuji na **skutečný datový storytelling**. Nevytvářím pouhé reporty – transformuji chladná transakční data do srozumitelných, finančně podložených a neprůstřelných byznysových příběhů, které pomáhají top managementu dělat včasná a správná rozhodnutí.
+Díky unikátní kombinaci pokročilých technických dovedností (MySQL, Power BI, DAX), analytické intuici a dlouholeté zkušenosti v ekonomické žurnalistice a literární tvorbě se specializuji na **skutečný datový storytelling**. Nevytvářím pouhé reporty – transformuji chladná transakční data do srozumitelných, finančně podložených a neprůstřelných byznysových příběhů, které pomáhají top managementu dělat včasná a správná rozhodnutí.
