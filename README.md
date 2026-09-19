@@ -14,7 +14,7 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 *   **Hrubý objem produkce:** Výrobní linky za toto období zpracovaly celkem **25,2 milionu archů**, což reflektuje strmě rostoucí tržní poptávku.
 *   **Akumulovaný provozní zisk:** Efektivní řízení kapacit vygenerovalo za necelé čtyři roky provozní zisk ve výši **65,5 milionu Kč**.
 *   **Rentabilita tržeb:** Průměrná ziskovost provozu si drží zdravou hladinu **24,90 %**.
-*   **Volná kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
+*   **Disponibilní kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
 
 
 ## Datová architektura a technologický stack
