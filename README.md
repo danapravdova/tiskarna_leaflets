@@ -67,8 +67,9 @@ Aby byl projekt plně replikovatelný a transparentní, repozitář obsahuje kom
 *   `database_schema.sql` - Kompletní produkční DDL skript definující relační databázovou strukturu, datové typy, primární klíče a striktní integritní omezení (`CONSTRAINT` / `FOREIGN KEY`) pro Star Schema.
 *   `data_transformation_audit.sql` - Transformační a čistící ETL uložená procedura řešící harmonizaci continuous provozu 24/7, korekci mechanických zmetků a stochastickou rekalibraci přesčasů.
 *   `DATA_DICTIONARY.md` - Kompletní datový slovník podrobně popisující význam, datový typ a byznysovou roli všech sloupců v dimenzích i tabulkách faktů.
-*   `tiskarna_Leaflets.mp4` - Video nahrávka ve vysokém rozlišení demonstrující interaktivitu celého reportu, What-If scénáře a dynamické křížové filtry v Power BI Desktop.
+*   `tiskarna_Leaflets.mp4` - Video nahrávka demonstrující interaktivitu celého reportu, What-If scénáře a dynamické křížové filtry v Power BI Desktop.
 *   `.gitignore` - Konfigurační soubor chránící repozitář před nahráváním lokální cache, uživatelských nastavení a dočasných systémových souborů Office/Windows.
+*   `data_sample`- Složka obsahující reprezentativní CSV vzorek surových transakčních dat (24/7 provozní logy, stárnutí skladu, mzdové číselníky).
 
 ---
 
