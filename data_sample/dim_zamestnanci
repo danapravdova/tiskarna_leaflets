@@ -1,0 +1,4 @@
+"id_zamestnance","jmeno","pozice","hodinova_sazba_zaklad","priplatek_sobota_procento","priplatek_svatek_procento","priplatek_prescas_procento","priplatek_nocni_procento"
+"TIS-01","Jan Novák","Hlavní tiskař","350.00","50.00","100.00","50.00","20.00"
+"TIS-02","Marek Dvořák","Hlavní tiskař","340.00","50.00","100.00","50.00","20.00"
+"TIS-03","Petr Svoboda","Hlavní tiskař","360.00","50.00","100.00","50.00","20.00"
