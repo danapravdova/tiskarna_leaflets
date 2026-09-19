@@ -17,11 +17,11 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 *   **Disponibilní kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
    
 <p align="center">
-  <a href="https://youtu.be" target="_blank">
-    <img src="https://squarespace-cdn.com" width="45%" alt="Spustit ukázku reportu">
-  </a>
+  <br>
+  👉 <b><a href="https://youtu.be" size="4">[KLIKNĚTE ZDE] SPUSTIT VIDEO UKÁZKU INTERAKTIVNÍHO REPORTU NA YOUTUBE</a></b> 👈
   <br>
   <font size="2" color="gray"><i>(Doporučeno: Otevřete video ukázku kliknutím kolečka myši nebo se stisknutou klávesou Ctrl pro zachování této stránky)</i></font>
+  <br>
 </p>
 
 ## Použité technologie a datová architektura
