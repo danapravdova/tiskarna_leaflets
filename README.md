@@ -15,10 +15,10 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 *   **Akumulovaný provozní zisk:** Efektivní řízení kapacit vygenerovalo za necelé čtyři roky provozní zisk ve výši **65,5 milionu Kč**.
 *   **Rentabilita tržeb:** Průměrná ziskovost provozu si drží zdravou hladinu **24,90 %**.
 *   **Disponibilní kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
-   
+
 <p align="center">
   <br>
-  👉 <b><a href="[https://youtu.be](https://youtu.be/v-IR-4F1xxA)" size="4">[KLIKNĚTE ZDE] SPUSTIT VIDEO UKÁZKU INTERAKTIVNÍHO REPORTU NA YOUTUBE</a></b> 👈
+  👉 <b><a href="https://youtu.be/v-IR-4F1xxA" size="4">[KLIKNĚTE ZDE] SPUSTIT VIDEO UKÁZKU INTERAKTIVNÍHO REPORTU NA YOUTUBE</a></b> 👈
   <br>
   <font size="2" color="gray"><i>(Doporučeno: Otevřete video ukázku kliknutím kolečka myši nebo se stisknutou klávesou Ctrl pro zachování této stránky)</i></font>
   <br>
