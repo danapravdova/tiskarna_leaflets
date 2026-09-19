@@ -16,7 +16,7 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 *   **Rentabilita tržeb:** Průměrná ziskovost provozu si drží zdravou hladinu **24,90 %**.
 *   **Disponibilní kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
 
-<video src="tiskarna_Leaflets.mp4" width="100%" controls></video>
+<video src="tiskárna_Leaflets.mp4" width="100%" controls></video>
 
 ## Použité technologie a datová architektura
 *   **Databázové inženýrství (MySQL):** Návrh a realizace relační databáze. Transformace surových transakčních logů z nepřetržitého 24/7 provozu pomocí uložených procedur, ošetření datové integrity a implementace stochastického šumu pro věrohodnou simulaci průmyslového chování.
