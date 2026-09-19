@@ -29,6 +29,9 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 *   **Datový model:** Vytvořila jsem striktní hvězdicové schéma (Star Schema – 2 tabulky faktů propojené přes cizí klíče na 5 rozměrových dimenzí) s jednosměrnými relacemi 1:N navržené tak, aby eliminovalo multiplicitu dat a maximalizovalo rychlost DAX výpočtů.
 *   **Pokročilá analytika (Power BI & DAX):** Vývoj komplexních byznysových metrik. Využití řádkových iterátorů s kontextuálními filtry (`SUMX`, `CALCULATE`), podmíněného alertingu a dynamického formátování pro okamžité manažerské vyhodnocení.
 
+### Ukázková data (Datový vzorek)
+Pro účely replikace projektu a kontroly datové struktury je v repozitáři nahrána složka `data_sample/`. Ta obsahuje reprezentativní CSV vzorek surových transakčních dat (24/7 provozní logy, stárnutí skladu, mzdové číselníky), nad kterými je postaven SQL datový sklad a Power BI report.
+
 ---
 
 ## Provázaný manažerský reporting: Od provozních dat k finančním výsledkům
