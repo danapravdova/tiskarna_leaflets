@@ -59,14 +59,19 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 
 ---
 
-## Struktura repozitáře a technická dokumentace
-*   `database_schema.sql` - Kompletní produkční DDL skript. Definuje striktní relační integritu, primární a cizí klíče, optimální datové typy a indexy pro eliminaci ambiguity v datovém skladu.
-*   `data_transformation_audit.sql` - Pokročilá ETL transformační procedura. Řeší harmonizaci continuous logů 24/7 provozu, čištění chyb, automatické doplňování provozních režií na základě materiálových matic a modelování organického mzdového šumu.
-*   `.gitignore` - Profesionálně nakonfigurovaný filtr chránící repozitář před nahráváním lokální cache, uživatelských nastavení oken Power BI a dočasných systémových souborů Office/Windows.
+## 📂 Struktura repozitáře a technický přehled souborů
+Aby byl projekt plně replikovatelný a transparentní, repozitář obsahuje kompletní vývojové a architektonické podklady:
+*   `database_schema.sql` - Kompletní produkční DDL skript definující relační databázovou strukturu, datové typy, primární klíče a striktní integritní omezení (`CONSTRAINT` / `FOREIGN KEY`) pro Star Schema.
+*   `data_transformation_audit.sql` - Transformační a čistící ETL uložená procedura řešící harmonizaci continuous provozu 24/7, korekci mechanických zmetků a stochastickou rekalibraci přesčasů.
+*   `DATA_DICTIONARY.md` - Kompletní datový slovník podrobně popisující význam, datový typ a byznysovou roli všech sloupců v dimenzích i tabulkách faktů.
+*   `tiskarna_Leaflets.mp4` - Video nahrávka ve vysokém rozlišení demonstrující interaktivitu celého reportu, What-If scénáře a dynamické křížové filtry v Power BI Desktop.
+*   `.gitignore` - Konfigurační soubor chránící repozitář před nahráváním lokální cache, uživatelských nastavení a dočasných systémových souborů Office/Windows.
 
 ---
 
-## O autorce: Spojení čísel a příběhů
+## 👩‍💻 O autorce: Spojení čísel a příběhů
 Jsem datová analytička s exaktním matematicko-statistickým zázemím z **Vysoké školy ekonomické v Praze (Fakulta informatiky a statistiky)** a mám 9 let reálné praxe v průmyslovém a finančním controllingu polygrafických provozů.
+
+Díky unikátní kombinaci pokročilých technických dovedností (MySQL, Power BI, DAX), analytické intuice a dlouholeté zkušenosti v ekonomické žurnalistice a literární tvorbě se specializuji na **skutečný datový storytelling**. Nevytvářím pouhé reporty – transformuji chladná transakční data do srozumitelných, finančně podložených a neprůstřelných byznysových příběhů, které pomáhají top managementu dělat včasná a správná rozhodnutí.
 
 Díky unikátní kombinaci pokročilých technických dovedností (MySQL, Power BI, DAX), analytické intuice a dlouholeté zkušenosti v ekonomické žurnalistice a literární tvorbě se specializuji na **skutečný datový storytelling**. Nevytvářím pouhé reporty – transformuji chladná transakční data do srozumitelných, finančně podložených a neprůstřelných byznyových příběhů, které pomáhají top managementu dělat včasná a správná rozhodnutí.
