@@ -10,11 +10,11 @@ Cílem projektu bylo vyřešit klasický manažerský konflikt: **Jak dlouho lze
 
 Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI projekt odkrývá skrytá provozní rizika, finančně vyčísluje náklady na držení skladových ležáků a dává top managementu do rukou predikční modely a What-If simulace pro strategická rozhodnutí v reálném čase.
 
-### Klíčové exekutivní ukazatele (EBITDA & Ops za období 2023 – 07/2026)
+### Klíčové finanční ukazatele za období 2023 – 07/2026
 *   **Hrubý objem produkce:** Výrobní linky za toto období zpracovaly celkem **25,2 milionu archů**, což reflektuje strmě rostoucí tržní poptávku.
-*   **Akumulovaný zisk EBIT:** Efektivní řízení kapacit vygenerovalo za necelé čtyři roky provozní zisk ve výši **65,5 milionu Kč**.
-*   **Rentabilita tržeb (ROS):** Průměrná ziskovost provozu si drží zdravou hladinu **24,90 %**.
-*   **Uvolněný kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
+*   **Akumulovaný provozní zisk:** Efektivní řízení kapacit vygenerovalo za necelé čtyři roky provozní zisk ve výši **65,5 milionu Kč**.
+*   **Rentabilita tržeb:** Průměrná ziskovost provozu si drží zdravou hladinu **24,90 %**.
+*   **Volná kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
 
 
 ## Datová architektura a technologický stack
