@@ -24,7 +24,7 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 
 ---
 
-## Provázaný manažerský reporting: Od stroje k zisku
+## Provázaný manažerský reporting: Od provozních dat k finančním výsledkům
 
 ### 1. Výrobní efektivita a audit kvality (První linie obrany marže)
 *   **Byznysový příběh:** Farmaceutický tisk netoleruje chyby – legislativní limit chybovosti je striktně nastaven na 0,50 %. Náš provoz vykazuje průměrnou zmetkovitost **0,63 %**, což automaticky aktivuje vizuální alarm na exekutivní kartě a odkrývá materiálové odpisy ve výši **203 626 Kč**. Data jasně usvědčují mechanické seřizování (špatný soutisk a ořez) na ofsetových linkách Heidelberg jako hlavního původce ztrát.
