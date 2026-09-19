@@ -29,6 +29,66 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
 *   **Datový model:** Vytvořila jsem striktní hvězdicové schéma (Star Schema – 2 tabulky faktů propojené přes cizí klíče na 5 rozměrových dimenzí) s jednosměrnými relacemi 1:N navržené tak, aby eliminovalo multiplicitu dat a maximalizovalo rychlost DAX výpočtů.
 *   **Pokročilá analytika (Power BI & DAX):** Vývoj komplexních byznysových metrik. Využití řádkových iterátorů s kontextuálními filtry (`SUMX`, `CALCULATE`), podmíněného alertingu a dynamického formátování pro okamžité manažerské vyhodnocení.
 
+## Ukázky pokročilého kódu (Code Samples)
+
+Pro ověření technické seniority uvádím ukázky reálné logiky z tohoto projektu, které demonstrují kombinaci pokročilého datového inženýrství a optimálního BI modelování:
+
+### 1. SQL (ETL transformace a mzdový audit 24/7 provozu)
+Tento fragment z uložené procedury `data_transformation_audit.sql` řeší finanční rekalibraci nepřetržitého provozu. Ošetřuje noční směny přetékající přes půlnoc a dynamicky kalkuluje reálné mzdové náklady směny (základní složku za standardních 8 hodin + progresivní příplatky za přesčasy) na základě mzdových číselníků.
+
+```sql
+SELECT 
+    v.id_zaznamu,
+    v.datum_smeny,
+    v.pocet_hodin_prescasu_smena,
+    z.hodinova_sazba_zaklad,
+    -- Výpočet mzdové složky za standardních 8 hodin + progresivní přesčas
+    (8 * z.hodinova_sazba_zaklad) + 
+    (v.pocet_hodin_prescasu_smena * z.hodinova_sazba_zaklad * (1 + z.priplatek_prescas_procento / 100)) AS mzda_zaklad_a_prescas,
+    -- Kalkulace specifických příplatků (noční / víkend) podle typu směny
+    CASE 
+        WHEN v.typ_smeny = 'Noční' THEN (8 * z.hodinova_sazba_zaklad * (z.priplatek_nocni_procento / 100))
+        ELSE 0 
+    END AS priplatek_nocni_celkem
+FROM fact_vyrobni_zaznamy_tisk v
+JOIN dim_zamestnanci_sazby z ON v.id_hlavni_tiskar = z.id_zamestnance;
+```
+
+### 2. DAX (Responzivní What-If simulace pro exekutivní karty vs. liniové grafy)
+Pro účely dynamické simulace nárůstu cen komodit jsem vytvořila dvojici provázaných metrik. Tento přístup striktně respektuje BI Best Practices – odděluje čistou číselnou logiku pro datové řady grafů od textově formátovaného výstupu pro manažerské KPI karty.
+
+#### A. Číselná metrika pro vizuály a navazující kalkulace (`_Num`)
+Metrika počítá simulované náklady jako čisté desetinné číslo, což umožňuje korektní vykreslení na osu Y v grafech a bezpečné použití v navazujících mírách (např. pro výpočet simulovaného zisku EBIT). Výpočet koeficientu z posuvníku je pro maximální výkon engine VertiPaq izolován v proměnné před samotnou iterační funkcí `SUMX`.
+
+```dax
+Fin_Naklady_Celkem_Num = 
+-- Zachycení procentuálního indexu z What-If posuvníku (např. 10 -> 1.10, -5 -> 0.95)
+VAR ProcentualniVlivParametru = 1 + ([Simulace_Cen_Materialu] / 100)
+RETURN
+    SUMX(
+        'fact_vyrobni_zaznamy_tisk',
+        -- A. Izolujeme hodnotu spotřebovaného papíru na směně, na kterou působí posuvník
+        VAR NakladNaPapirSmena = 'fact_vyrobni_zaznamy_tisk'[vytisteno_archu_celkem] * RELATED('dim_sklad_material'[cena_za_arch_czk])
+        
+        -- B. Načteme čistou provozní režii přímo ze sloupce bez odečítání
+        VAR ProvozniRezieSmena = 'fact_vyrobni_zaznamy_tisk'[provozni_naklady_smena_czk]
+        RETURN
+            -- Sečteme simulovanou cenu papíru + čistou režii z databáze
+            (NakladNaPapirSmena * ProcentualniVlivParametru) + ProvozniRezieSmena
+    )
+```
+
+#### B. Formátovaná metrika pro exekutivní KPI karty (`_Kc`)
+Tato dceřiná metrika staví na provázaném základu předchozího výpočtu a bezpečně ho transformuje do textové podoby s národní měnovou značkou, určené výhradně pro statické exekutivní panely.
+
+```dax
+Fin_Naklady_Celkem_Kc = 
+FORMAT(
+    [Fin_Naklady_Celkem_Num],
+    "#,##0 Kč"
+)
+```
+
 ### Ukázková data (Datový vzorek)
 Pro účely replikace projektu a kontroly datové struktury je v repozitáři nahrána složka `data_sample/`. Ta obsahuje reprezentativní CSV vzorek surových transakčních dat (24/7 provozní logy, stárnutí skladu, mzdové číselníky), nad kterými je postaven SQL datový sklad a Power BI report.
 
