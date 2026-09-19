@@ -2,7 +2,7 @@
 ### Od Transakčního Chaosu k Řízení Marže
 
 ## Příběh dat: Když kapacita naráží na technologický strop
-Tento projekt je komplexní případovou studií z prostředí polygrafického provozu specializovaného na tisk příbalových letáků pro nadnárodní farmaceutické lídry (**Zentiva, Sanofi, Novartis, Teva**). **Prezentovaná data, názvy entit i finanční výsledky jsou naprosto smyšlené a slouží výhradně pro účely této ukázky.** 
+Tento projekt je komplexní případovou studií z prostředí polygrafického provozu specializovaného na tisk příbalových letáků pro nadnárodní farmaceutické lídry (**Zentiva, Sanofi, Novartis, Teva**). Prezentovaná data, názvy entit i finanční výsledky jsou naprosto smyšlené a slouží výhradně pro účely této ukázky. 
 
 Celá architektura, datový model i byznysová logika však stoprocentně vycházejí z mé **9leté reálné praxe na pozici datové analytičky v reálné tiskárně farmaceutických příbalových letáků**. Projekt tak nepředstavuje generická data stažená z internetu, ale věrně simuluje skutečné zákonitosti, technologické limity, chybovost a finanční procesy v polygrafickém průmyslu.
 
@@ -10,13 +10,12 @@ Cílem projektu bylo vyřešit klasický manažerský konflikt: **Jak dlouho lze
 
 Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI projekt odkrývá skrytá provozní rizika, finančně vyčísluje náklady na držení skladových ležáků a dává top managementu do rukou predikční modely a What-If simulace pro strategická rozhodnutí v reálném čase.
 
-### Klíčové exekutivní ukazatele (EBITDA & Ops)
-*   **Hrubý objem produkce:** Výrobní linky zpracovaly celkem **25,2 milionu archů**, což reflektuje strmě rostoucí tržní poptávku.
-*   **Akumulovaný zisk EBIT:** Efektivní řízení kapacit vygenerovalo provozní zisk ve výši **65,5 milionu Kč**.
+### Klíčové exekutivní ukazatele (EBITDA & Ops za období 2023 – 07/2026)
+*   **Hrubý objem produkce:** Výrobní linky za toto období zpracovaly celkem **25,2 milionu archů**, což reflektuje strmě rostoucí tržní poptávku.
+*   **Akumulovaný zisk EBIT:** Efektivní řízení kapacit vygenerovalo za necelé čtyři roky provozní zisk ve výši **65,5 milionu Kč**.
 *   **Rentabilita tržeb (ROS):** Průměrná ziskovost provozu si drží zdravou hladinu **24,90 %**.
 *   **Uvolněný kapitál:** Identifikací kritických ležáků a optimalizací mzdových struktur byl izolován finanční polštář v hodnotě **924 901 Kč** připravený pro strategický rozvoj.
 
----
 
 ## Datová architektura a technologický stack
 *   **Databázové inženýrství (MySQL):** Návrh a realizace relační databáze. Transformace surových transakčních logů z nepřetržitého 24/7 provozu pomocí uložených procedur, ošetření datové integrity a implementace stochastického šumu pro věrohodnou simulaci průmyslového chování.
