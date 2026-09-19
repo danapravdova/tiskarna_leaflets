@@ -18,7 +18,7 @@ Pomocí datového inženýrství v MySQL a pokročilého modelování v Power BI
    
 <p align="center">
   <a href="https://youtu.be" target="_blank">
-    <img src="https://shields.io▶_SPUSTIT_VIDEO_UKÁZKU_REPORTU_(YOUTUBE)-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" width="60%" alt="Spustit ukázku reportu">
+    <img src="https://squarespace-cdn.com" width="45%" alt="Spustit ukázku reportu">
   </a>
   <br>
   <font size="2" color="gray"><i>(Doporučeno: Otevřete video ukázku kliknutím kolečka myši nebo se stisknutou klávesou Ctrl pro zachování této stránky)</i></font>
